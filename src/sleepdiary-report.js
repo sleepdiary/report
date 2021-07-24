@@ -112,7 +112,7 @@
     pdf["textWithLink"](
         'github.com/sleepdiary',
         67.2, 150 + 4.875 * (text_a.length+text_b.length) - 0.1,
-        { url: 'https://www.github.com/sleepdiary' }
+        { url: 'https://sleepdiary.github.io' }
     );
     pdf["setTextColor"]( 0 );
 
