@@ -11,6 +11,7 @@ Here are some useful links:
 * [the sleep diary dashboard](../dashboard) lets you build a diary from multiple sources, and can generate reports through the _Printable report_ option
 * [the sleep diary info](https://github.com/sleepdiary/info) contains information and tools to analyse sleep
 * <a href="#diary-input" id="diary-input-link">upload your own diary</a> to see a report
+* [contact us](https://github.com/sleepdiary/report/issues/new/choose)
 <input id="diary-input" type="file" style="display:none">
 
 This project aims to provide a resource for doctors to understand their patients' sleeping disorders.  If there is something more we could do, please [describe it in a new issue](https://github.com/sleepdiary/report/issues/new).  Please include the relevant software version if possible.
