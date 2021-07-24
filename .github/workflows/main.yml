@@ -23,7 +23,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: built
-      - name: Build docs
+      - name: Build
         run: ./bin/build.sh
         env:
           GIT_AUTHOR_NAME: "Automatic updater [bot]"

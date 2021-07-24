@@ -17,5 +17,7 @@ sleepdiary-report.min.js: src/header.js src/constants.js $(FILES) src/footer.js
 	echo "//# sourceMappingURL="$@.map >> $@
 	rm -f constants.js
 
+build: sleepdiary-report.min.js
+
 clean:
 	rm -rf README.html sleepdiary-report.min.js*
