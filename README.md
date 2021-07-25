@@ -20,7 +20,7 @@ This project aims to provide a resource for doctors to understand their patients
 
 The summary data includes the version identifier for the report, and for the software that generated it.
 
-Software versions allow developers to detect the exact software version used to build a report.  This includes changes that don't affect the report itself, like changes to copyright dates.  They are based on the lists of source code commits available in [the report itself](https://github.com/sleepdiary/report/commits/main) and the software library that builds the data (usually [Sleep Diary Library](https://github.com/sleepdiary/library/commits/main)).
+Software versions allow developers to detect the exact software version used to build a report.  This includes changes that don't affect the report itself, like changes to copyright dates.  They are based on the lists of source code commits available in [the report itself](https://github.com/sleepdiary/report/commits/built) and the software library that builds the data (usually [Sleep Diary Library](https://github.com/sleepdiary/library/commits/built)).
 
 Report versions indicate changes to the report that are visible to doctors and patients.  A complete list is available in [the version history](version_history.txt).
 
