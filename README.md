@@ -20,7 +20,7 @@ This project aims to provide a resource for doctors to understand their patients
 
 The summary data includes the version identifier for the report, and for the software that generated it.
 
-Software versions allow developers to detect the exact software version used to build a report.  This includes changes that don't affect the report itself, like changes to copyright dates.  They are based on the lists of source code commits available in [the report itself](https://github.com/sleepdiary/report/commits/built) and the software library that builds the data (usually [Sleep Diary Library](https://github.com/sleepdiary/library/commits/built)).
+Software versions allow developers to detect the exact software version used to build a report.  This includes changes that don't affect the report itself, like changes to copyright dates.  They are based on the lists of source code commits available in the software library that builds the data (usually [Sleep Diary Library](https://github.com/sleepdiary/library/commits/built)) and in [the report itself](https://github.com/sleepdiary/report/commits/built).
 
 Report versions indicate changes to the report that are visible to doctors and patients.  A complete list is available in [the version history](version_history.txt).
 
@@ -122,7 +122,7 @@ The included [`Dockerfile`](Dockerfile) describes our build environment.  To rec
     docker build --tag sleepdiary-report "/path/to/sleepdiary/report"
     docker run --rm -v "/path/to/sleepdiary/report":/app sleepdiary-report
 
-This is run automatically by [our GitHub Actions script](.github/workflows/main.yml).  If you fork this project on GitHub, the site itself should rebuild the project automatically whenever you push a change.
+This is run automatically by [our GitHub Actions script](.github/workflows/main.yml).  If you fork this project on GitHub, [enable GitHub Actions](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow) to rebuild the project automatically whenever you push a change.
 
 ## License
 
