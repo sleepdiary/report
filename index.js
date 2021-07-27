@@ -1,7 +1,7 @@
 /**
  * @preserve
  * @brief Sleep Diary Report - summary of a sleep diary for use by doctors
- * @copyright (C) 2021 Andrew Sayers <sleepdiary@pileofstuff.org>
+ * @copyright (C) 2021 Sleepdiary Developers <sleepdiary@pileofstuff.org>
  *
  * @license
  *

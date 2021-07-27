@@ -2,7 +2,7 @@
 #
 # Generate constants used by the sleep diary report
 #
-# Copyright (C) 2021 Andrew Sayers <sleepdiary@pileofstuff.org>
+# Copyright (C) 2021 Sleepdiary Developers <sleepdiary@pileofstuff.org>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
