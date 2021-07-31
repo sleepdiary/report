@@ -115,12 +115,16 @@ Reports are generally build with [jsPDF](https://github.com/MrRio/jsPDF), using 
 
 When constructing the data used by the report, make sure to use 24-hour days starting at 6pm local time, and to generate one-hour segments.
 
-## Compiling this project
+## Developing the project
 
-The included [`Dockerfile`](Dockerfile) describes our build environment.  To recompile the project, build and run the environment like this:
+Most people can use the pre-compiled [sleepdiary-report.min.js](sleepdiary-report.min.js).  If you want to compile the project yourself, the recommended solution is to [install Docker](https://docs.docker.com/get-started/) and do:
 
-    docker build --tag sleepdiary-report "/path/to/sleepdiary/report"
-    docker run --rm -it -v "/path/to/sleepdiary/report":/app sleepdiary-report
+    # build and test:
+    docker run --rm -it -v "/path/to/sleepdiary/report":/app sleepdiaryproject/builder
+    # build but don't test:
+    docker run --rm -it -v "/path/to/sleepdiary/report":/app sleepdiaryproject/builder build
+    # rebuild whenever files change:
+    docker run --rm -it -v "/path/to/sleepdiary/report":/app sleepdiaryproject/builder run
 
 This is run automatically by [our GitHub Actions script](.github/workflows/main.yml).  If you fork this project on GitHub, [enable GitHub Actions](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow) to rebuild the project automatically whenever you push a change.
 
