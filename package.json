@@ -1,0 +1,29 @@
+{
+  "name": "@sleepdiary/report",
+  "description": "Sleep report for doctors",
+  "version": "0.1.0",
+  "main": "sleepdiary-report.min.js",
+  "homepage": "https://github.com/sleepdiary/report",
+  "bugs": "https://github.com/sleepdiary/report/issues",
+  "repository": "github:sleepdiary/report",
+  "private": true,
+  "license": "GPL-2.0-only",
+  "files": [
+    "sleepdiary-report.min.js",
+    "sleepdiary-report.min.js.map"
+  ],
+  "dependencies": {
+    "@sleepdiary/core": "^0.1.0"
+  },
+  "keywords": [
+    "sleep",
+    "sleep-analysis",
+    "sleep-diary",
+    "sleep-format",
+    "circadian",
+    "circadian-rhythm",
+    "circadian-rhythm-disorder",
+    "sleep-disorders",
+    "sleep-tools"
+  ]
+}
