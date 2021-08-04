@@ -1,17 +1,21 @@
-# Build the project
+# Run tests when a pull request is received
 #
-# See also:
-# Caching workflows: https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows
+# Note: As of 2021-08-04, GitHub Actions has no good way to reply to PRs.
+# Here are some links that might help:
+# * https://github.community/t/github-actions-are-severely-limited-on-prs/18179#M9249
+#   * people complaining about this issue, some have interesting workarounds
+# * https://github.com/mshick/add-pr-comment
+#   * one (partial) solution
 
-name: Merge and push
+name: Check incoming PRs
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Cache node modules
@@ -29,13 +33,9 @@ jobs:
         with:
           fetch-depth: 0
           ref: built
-      - uses: actions/setup-node@v2.3.1
-      - name: Build
+      - uses: actions/setup-node@v2.3.0
+      - name: Run tests
+        id: run_tests
         uses: docker://ghcr.io/sleepdiary/builder:latest
         with:
-          args: merge-and-push
-        env:
-          GIT_AUTHOR_NAME: "Automatic updater [bot]"
-          GIT_AUTHOR_EMAIL: "sleepdiary-bot@pileofstuff.org"
-          GIT_COMMITTER_NAME: "Automatic updater [bot]"
-          GIT_COMMITTER_EMAIL: "sleepdiary-bot@pileofstuff.org"
+          args: automated-test
