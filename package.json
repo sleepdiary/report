@@ -13,6 +13,9 @@
     "sleepdiary-report.min.js.map"
   ],
   "dependencies": {},
+  "devDependencies": {
+    "google-closure-compiler": ">=20210601.0.0"
+  },
   "scripts": {
     "build": "./bin/run.sh build",
     "force-build": "./bin/run.sh build --force",
