@@ -10,12 +10,13 @@ CLOSURE_OPTIONS= \
 
 sleepdiary-report.min.js: src/header.js src/constants.js $(FILES) src/footer.js
 	./bin/create-constants.sh
-	google-closure-compiler \
+	@echo Compiling $@
+	@google-closure-compiler \
 		$(CLOSURE_OPTIONS) \
 		--js constants.js $^ \
 		--create_source_map $@.map --js_output_file $@
-	echo "//# sourceMappingURL="$@.map >> $@
-	rm -f constants.js
+	@echo "//# sourceMappingURL="$@.map >> $@
+	@rm -f constants.js
 
 build: sleepdiary-report.min.js
 
