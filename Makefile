@@ -9,9 +9,9 @@ CLOSURE_OPTIONS= \
 		--language_out ECMASCRIPT5 \
 
 sleepdiary-report.min.js: src/header.js src/constants.js $(FILES) src/footer.js
-	./bin/create-constants.sh
+	@./bin/create-constants.sh
 	@echo Compiling $@
-	@google-closure-compiler \
+	@npx google-closure-compiler \
 		$(CLOSURE_OPTIONS) \
 		--js constants.js $^ \
 		--create_source_map $@.map --js_output_file $@
