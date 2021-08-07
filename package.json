@@ -15,6 +15,12 @@
   "dependencies": {
     "@sleepdiary/core": "^0.1.0"
   },
+  "scripts": {
+    "build": "./bin/run.sh build",
+    "force-build": "./bin/run.sh build --force",
+    "test": "./bin/run.sh test",
+    "serve": "./bin/run.sh serve"
+  },
   "keywords": [
     "sleep",
     "sleep-analysis",
