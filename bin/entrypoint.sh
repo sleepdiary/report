@@ -22,9 +22,9 @@ cmd_run() {
         done
 }
 
-if [ -e /build-sleepdiary.sh ]
+if [ -e /opt/sleepdiary/build-sleepdiary.sh ]
 then
-    . /build-sleepdiary.sh "$@"
+    . /opt/sleepdiary/build-sleepdiary.sh "$@"
 else
     echo "Usage: docker run --rm -it -v $( realpath "$( dirname "$0" )/.." ):/app sleepdiaryproject/builder" "$@"
     exit 2
