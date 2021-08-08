@@ -12,8 +12,15 @@
     "sleepdiary-report.min.js",
     "sleepdiary-report.min.js.map"
   ],
-  "dependencies": {
-    "@sleepdiary/core": "^0.1.0"
+  "dependencies": {},
+  "devDependencies": {
+    "google-closure-compiler": ">=20210601.0.0"
+  },
+  "scripts": {
+    "build": "./bin/run.sh build",
+    "force-build": "./bin/run.sh build --force",
+    "test": "./bin/run.sh test",
+    "serve": "./bin/run.sh serve"
   },
   "keywords": [
     "sleep",
