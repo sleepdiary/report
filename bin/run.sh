@@ -43,6 +43,10 @@ case "$1" in
             done
         ;;
 
+    upgrade)
+        npm upgrade
+        ;;
+
     *)
         exit 2
         ;;
