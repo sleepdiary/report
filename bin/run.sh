@@ -1,5 +1,12 @@
 #!/bin/sh
 
+set -e
+
+if [ -e /opt/sleepdiary/utils.sh ]
+then . /opt/sleepdiary/utils.sh
+else printf '\033[1;31m/opt/sleepdiary/utils.sh not found - some checks bypassed.\033[0m\n'
+fi
+
 do_build() {
 
     echo
@@ -11,15 +18,9 @@ do_build() {
 
 }
 
-if [ -e /opt/sleepdiary/utils.sh ]
-then . /opt/sleepdiary/utils.sh
-else printf '\033[1;31m/opt/sleepdiary/utils.sh not found - some checks bypassed.\033[0m\n'
-fi
-
 case "$1" in
 
     build)
-        npm ci --silent
         do_build
         ;;
 
@@ -41,6 +42,10 @@ case "$1" in
                     *) printf '\033[1;31mFailed!\033[0m\n' ;;
                 esac
             done
+        ;;
+
+    upgrade)
+        npm upgrade
         ;;
 
     *)
