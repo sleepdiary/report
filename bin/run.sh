@@ -18,6 +18,19 @@ do_build() {
 
 }
 
+checked_build() {
+
+    set +e
+    do_build
+    case "$?" in
+        0) printf '\033[1;32mSuccess!\033[0m\n' ;;
+        1) printf '\033[1;33mNon-fatal errors occurred!\033[0m\n' ;;
+        *) printf '\033[1;31mFailed!\033[0m\n' ;;
+    esac
+    set -e
+
+}
+
 case "$1" in
 
     build)
@@ -31,16 +44,10 @@ case "$1" in
 
     serve)
         DIRECTORIES=src
-        do_build
+        checked_build
         inotifywait -r -q -e CLOSE_WRITE -m $DIRECTORIES | \
             while read REPLY
-            do
-                do_build
-                case "$?" in
-                    0) printf '\033[1;32mSuccess!\033[0m\n' ;;
-                    1) printf '\033[1;33mNon-fatal errors occurred!\033[0m\n' ;;
-                    *) printf '\033[1;31mFailed!\033[0m\n' ;;
-                esac
+            do checked_build
             done
         ;;
 
