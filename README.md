@@ -25,7 +25,7 @@ Report versions indicate changes to the report that are visible to doctors and p
 
 ## Moldofsky/Macfarlane Sleep Disorder Patient Charts
 
-The Sleep Disorder Patient Chart, pioneered by [Harvey Moldoysky](http://sites.utoronto.ca/pain/about-us/profile/harvey-moldofsky.html) and [James G. Macfarlane](https://www.psychiatry.utoronto.ca/faculty/james-g-macfarlane) in the early 1990's, has come to be widely used by sleep doctors around the world.  It asks patients to record the following activities:
+The Sleep Disorder Patient Chart, pioneered by [Harvey Moldofsky](http://sites.utoronto.ca/pain/about-us/profile/harvey-moldofsky.html) and [James G. Macfarlane](https://www.psychiatry.utoronto.ca/faculty/james-g-macfarlane) in the early 1990's, has come to be widely used by sleep doctors around the world.  It asks patients to record the following activities:
 
 - `A` - each alcoholic drink
 - `C` - each caffeinated drink (includes coffee, tea, chocolate, cola)
