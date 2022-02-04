@@ -10,6 +10,7 @@ Here are some useful links:
 
 - [the sleep diary dashboard](../dashboard) lets you build a diary from multiple sources, and can generate reports through the *Printable report* option
 - [the sleep diary info](https://github.com/sleepdiary/info) contains information and tools to analyse sleep
+- [an example report](Example%20report.pdf) based on [simulated data](https://sleepdiary.github.io/docs/patterns/simulate.html)
 - <a href="#diary-input" id="diary-input-link">upload your own diary</a> to see a report <input id="diary-input" type="file" style="display:none">
 - [contact us](https://github.com/sleepdiary/report/issues/new/choose)
 
